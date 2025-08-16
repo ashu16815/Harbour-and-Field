@@ -1,0 +1,400 @@
+{% comment %}
+  Capsule Wardrobe Section for Harbour & Field Menswear
+  Features: Rotating carousel of blazer + trousers + shirt pairings
+{% endcomment %}
+
+<div class="capsule-wardrobe section-{{ section.id }}-padding">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <div class="capsule-wardrobe__header text-center">
+        <h2 class="capsule-wardrobe__heading h1">
+          {{ section.settings.heading | escape }}
+        </h2>
+        {% if section.settings.subheading != blank %}
+          <p class="capsule-wardrobe__subheading">
+            {{ section.settings.subheading | escape }}
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+    
+    <div class="capsule-wardrobe__carousel">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'outfit' %}
+            <div class="capsule-wardrobe__outfit" {{ block.shopify_attributes }}>
+              <div class="capsule-wardrobe__outfit-image">
+                {% if block.settings.outfit_image != blank %}
+                  <img
+                    src="{{ block.settings.outfit_image | image_url: width: 600 }}"
+                    alt="{{ block.settings.outfit_image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.outfit_image.width }}"
+                    height="{{ block.settings.outfit_image.height }}"
+                    class="capsule-wardrobe__image"
+                  >
+                {% endif %}
+              </div>
+              
+              <div class="capsule-wardrobe__outfit-details">
+                <h3 class="capsule-wardrobe__outfit-title h3">
+                  {{ block.settings.outfit_title | escape }}
+                </h3>
+                
+                <div class="capsule-wardrobe__pieces">
+                  {% if block.settings.blazer != blank %}
+                    <div class="capsule-wardrobe__piece">
+                      <span class="capsule-wardrobe__piece-label">Blazer:</span>
+                      <a href="{{ block.settings.blazer.url }}" class="capsule-wardrobe__piece-link">
+                        {{ block.settings.blazer.title }}
+                      </a>
+                    </div>
+                  {% endif %}
+                  
+                  {% if block.settings.trousers != blank %}
+                    <div class="capsule-wardrobe__piece">
+                      <span class="capsule-wardrobe__piece-label">Trousers:</span>
+                      <a href="{{ block.settings.trousers.url }}" class="capsule-wardrobe__piece-link">
+                        {{ block.settings.trousers.title }}
+                      </a>
+                    </div>
+                  {% endif %}
+                  
+                  {% if block.settings.shirt != blank %}
+                    <div class="capsule-wardrobe__piece">
+                      <span class="capsule-wardrobe__piece-label">Shirt:</span>
+                      <a href="{{ block.settings.shirt.url }}" class="capsule-wardrobe__piece-link">
+                        {{ block.settings.shirt.title }}
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
+                
+                {% if block.settings.description != blank %}
+                  <p class="capsule-wardrobe__outfit-description">
+                    {{ block.settings.description | escape }}
+                  </p>
+                {% endif %}
+                
+                {% if block.settings.shop_all_label != blank %}
+                  <a href="{{ block.settings.shop_all_link | default: '/collections/all' }}" class="button button--secondary capsule-wardrobe__shop-all">
+                    {{ block.settings.shop_all_label | escape }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    
+    {% if section.blocks.size > 1 %}
+      <div class="capsule-wardrobe__navigation">
+        <button class="capsule-wardrobe__nav-button capsule-wardrobe__nav-prev" aria-label="Previous outfit">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="capsule-wardrobe__nav-button capsule-wardrobe__nav-next" aria-label="Next outfit">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .capsule-wardrobe {
+    background: var(--color-warm-cream);
+    padding: 100px 0;
+  }
+  
+  .capsule-wardrobe__header {
+    margin-bottom: 80px;
+  }
+  
+  .capsule-wardrobe__heading {
+    font-family: var(--font-heading-family);
+    color: var(--color-text-dark);
+    margin-bottom: 24px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+  }
+  
+  .capsule-wardrobe__subheading {
+    font-family: var(--font-body-family);
+    color: var(--color-charcoal-grey);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .capsule-wardrobe__carousel {
+    position: relative;
+    margin-bottom: 60px;
+  }
+  
+  .capsule-wardrobe__outfit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .capsule-wardrobe__outfit.active {
+    opacity: 1;
+    position: relative;
+  }
+  
+  .capsule-wardrobe__outfit-image {
+    position: relative;
+  }
+  
+  .capsule-wardrobe__image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  
+  .capsule-wardrobe__outfit-details {
+    padding: 40px;
+  }
+  
+  .capsule-wardrobe__outfit-title {
+    font-family: var(--font-heading-family);
+    color: var(--color-premium-navy);
+    margin-bottom: 32px;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  .capsule-wardrobe__pieces {
+    margin-bottom: 32px;
+  }
+  
+  .capsule-wardrobe__piece {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+  
+  .capsule-wardrobe__piece-label {
+    font-family: var(--font-body-family);
+    font-weight: 600;
+    color: var(--color-charcoal-grey);
+    min-width: 80px;
+  }
+  
+  .capsule-wardrobe__piece-link {
+    font-family: var(--font-body-family);
+    color: var(--color-premium-navy);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .capsule-wardrobe__piece-link:hover {
+    color: var(--color-gold-accent);
+  }
+  
+  .capsule-wardrobe__outfit-description {
+    font-family: var(--font-body-family);
+    color: var(--color-charcoal-grey);
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  
+  .capsule-wardrobe__shop-all {
+    background: var(--color-premium-navy);
+    color: var(--color-merino-white);
+    border: 2px solid var(--color-premium-navy);
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border-radius: 0;
+  }
+  
+  .capsule-wardrobe__shop-all:hover {
+    background: transparent;
+    color: var(--color-premium-navy);
+  }
+  
+  .capsule-wardrobe__navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .capsule-wardrobe__nav-button {
+    background: var(--color-premium-navy);
+    color: var(--color-merino-white);
+    border: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .capsule-wardrobe__nav-button:hover {
+    background: var(--color-gold-accent);
+    transform: scale(1.1);
+  }
+  
+  @media screen and (max-width: 989px) {
+    .capsule-wardrobe__outfit {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+    
+    .capsule-wardrobe__outfit-details {
+      padding: 20px;
+    }
+    
+    .capsule-wardrobe__piece {
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width: 749px) {
+    .capsule-wardrobe {
+      padding: 60px 0;
+    }
+    
+    .capsule-wardrobe__header {
+      margin-bottom: 40px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const outfits = document.querySelectorAll('.capsule-wardrobe__outfit');
+    const prevButton = document.querySelector('.capsule-wardrobe__nav-prev');
+    const nextButton = document.querySelector('.capsule-wardrobe__nav-next');
+    let currentIndex = 0;
+    
+    if (outfits.length <= 1) return;
+    
+    function showOutfit(index) {
+      outfits.forEach((outfit, i) => {
+        outfit.classList.toggle('active', i === index);
+      });
+    }
+    
+    function nextOutfit() {
+      currentIndex = (currentIndex + 1) % outfits.length;
+      showOutfit(currentIndex);
+    }
+    
+    function prevOutfit() {
+      currentIndex = (currentIndex - 1 + outfits.length) % outfits.length;
+      showOutfit(currentIndex);
+    }
+    
+    if (prevButton) prevButton.addEventListener('click', prevOutfit);
+    if (nextButton) nextButton.addEventListener('click', nextOutfit);
+    
+    // Show first outfit initially
+    showOutfit(0);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Capsule Wardrobe",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Capsule Wardrobe",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "Mix and match pieces to create versatile looks that transition seamlessly from office to evening.",
+      "label": "Subheading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "outfit",
+      "name": "Outfit",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "outfit_image",
+          "label": "Outfit image"
+        },
+        {
+          "type": "text",
+          "id": "outfit_title",
+          "default": "Boardroom Ready",
+          "label": "Outfit title"
+        },
+        {
+          "type": "product",
+          "id": "blazer",
+          "label": "Blazer"
+        },
+        {
+          "type": "product",
+          "id": "trousers",
+          "label": "Trousers"
+        },
+        {
+          "type": "product",
+          "id": "shirt",
+          "label": "Shirt"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "default": "A sophisticated ensemble perfect for important meetings and presentations.",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "shop_all_label",
+          "default": "Shop This Look",
+          "label": "Shop all button label"
+        },
+        {
+          "type": "url",
+          "id": "shop_all_link",
+          "label": "Shop all button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Capsule Wardrobe",
+      "blocks": [
+        {
+          "type": "outfit"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

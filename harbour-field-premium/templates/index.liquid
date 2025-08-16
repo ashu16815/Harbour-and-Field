@@ -1,0 +1,382 @@
+{% comment %}
+  Harbour & Field Premium Menswear Homepage
+  Features: Premium hero, capsule wardrobe, why us, and other brand-focused sections
+{% endcomment %}
+
+{{ 'premium-colors.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'premium_hero' %}
+        {% render 'premium-hero', section: block %}
+      {% when 'capsule_wardrobe' %}
+        {% render 'capsule-wardrobe', section: block %}
+      {% when 'why_us' %}
+        {% render 'why-us', section: block %}
+      {% when 'featured_collection' %}
+        {% render 'featured-collection', section: block %}
+      {% when 'rich_text' %}
+        {% render 'rich-text', section: block %}
+      {% when 'image_with_text' %}
+        {% render 'image-with-text', section: block %}
+      {% when 'newsletter' %}
+        {% render 'newsletter', section: block %}
+      {% when 'slideshow' %}
+        {% render 'slideshow', section: block %}
+      {% when 'multicolumn' %}
+        {% render 'multicolumn', section: block %}
+      {% when 'collage' %}
+        {% render 'collage', section: block %}
+      {% when 'custom_liquid' %}
+        {{ block.settings.custom_liquid }}
+    {% endcase %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Premium Homepage",
+  "tag": "section",
+  "class": "section",
+  "blocks": [
+    {
+      "type": "premium_hero",
+      "name": "Premium Hero",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Modern Businesswear. Redefined.",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "default": "Premium menswear crafted for the modern professional. Timeless style meets contemporary comfort in every piece.",
+          "label": "Subheading"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Shop the Collection",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Hero image"
+        }
+      ]
+    },
+    {
+      "type": "capsule_wardrobe",
+      "name": "Capsule Wardrobe",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Capsule Wardrobe",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "default": "Mix and match pieces to create versatile looks that transition seamlessly from office to evening.",
+          "label": "Subheading"
+        }
+      ]
+    },
+    {
+      "type": "why_us",
+      "name": "Why Us",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Why Choose Harbour & Field",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "default": "We're committed to delivering exceptional quality and service in every aspect of your experience.",
+          "label": "Subheading"
+        }
+      ]
+    },
+    {
+      "type": "featured_collection",
+      "name": "Featured Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Featured Collection",
+          "label": "Title"
+        },
+        {
+          "type": "range",
+          "id": "products_to_show",
+          "min": 2,
+          "max": 12,
+          "step": 1,
+          "default": 4,
+          "label": "Maximum products to show"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_view_all",
+          "default": true,
+          "label": "Show 'View all' button"
+        }
+      ]
+    },
+    {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Talk about your brand",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "desktop_content_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Desktop content alignment"
+        }
+      ]
+    },
+    {
+      "type": "image_with_text",
+      "name": "Image with Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Image with text",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "height",
+          "options": [
+            {
+              "value": "adapt",
+              "label": "Adapt to image"
+            },
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ],
+          "default": "adapt",
+          "label": "Image height"
+        },
+        {
+          "type": "select",
+          "id": "desktop_image_width",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ],
+          "default": "medium",
+          "label": "Desktop image width"
+        },
+        {
+          "type": "select",
+          "id": "layout",
+          "options": [
+            {
+              "value": "image_first",
+              "label": "Image first"
+            },
+            {
+              "value": "text_first",
+              "label": "Text first"
+            }
+          ],
+          "default": "image_first",
+          "label": "Desktop image placement"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Subscribe to our emails",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
+          "label": "Subtext"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Subscribe",
+          "label": "Button label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_background",
+          "default": true,
+          "label": "Show background"
+        }
+      ]
+    },
+    {
+      "type": "slideshow",
+      "name": "Slideshow",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Slideshow",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "multicolumn",
+      "name": "Multicolumn",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Multicolumn",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "collage",
+      "name": "Collage",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collage",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "custom_liquid",
+      "name": "Custom Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom liquid",
+          "info": "Add app snippets or other Liquid code to create advanced customizations."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Premium Homepage",
+      "blocks": [
+        {
+          "type": "premium_hero"
+        },
+        {
+          "type": "capsule_wardrobe"
+        },
+        {
+          "type": "why_us"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "rich_text"
+        },
+        {
+          "type": "newsletter"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

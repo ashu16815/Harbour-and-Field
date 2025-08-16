@@ -1,0 +1,300 @@
+{% comment %}
+  Why Us Section for Harbour & Field Menswear
+  Features: Value propositions - Fit, Fabric, Sustainability, Service
+{% endcomment %}
+
+<div class="why-us section-{{ section.id }}-padding">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <div class="why-us__header text-center">
+        <h2 class="why-us__heading h1">
+          {{ section.settings.heading | escape }}
+        </h2>
+        {% if section.settings.subheading != blank %}
+          <p class="why-us__subheading">
+            {{ section.settings.subheading | escape }}
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+    
+    <div class="why-us__grid">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'value_prop' %}
+            <div class="why-us__item" {{ block.shopify_attributes }}>
+              <div class="why-us__icon">
+                {% if block.settings.icon != blank %}
+                  <img
+                    src="{{ block.settings.icon | image_url: width: 80 }}"
+                    alt="{{ block.settings.icon.alt | escape }}"
+                    loading="lazy"
+                    width="80"
+                    height="80"
+                    class="why-us__icon-image"
+                  >
+                {% else %}
+                  <div class="why-us__icon-placeholder">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                      <path d="M20 10L20 30M10 20L30 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                {% endif %}
+              </div>
+              
+              <div class="why-us__content">
+                <h3 class="why-us__title h3">
+                  {{ block.settings.title | escape }}
+                </h3>
+                
+                {% if block.settings.description != blank %}
+                  <p class="why-us__description">
+                    {{ block.settings.description | escape }}
+                  </p>
+                {% endif %}
+                
+                {% if block.settings.link_text != blank and block.settings.link_url != blank %}
+                  <a href="{{ block.settings.link_url }}" class="why-us__link">
+                    {{ block.settings.link_text | escape }}
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .why-us {
+    background: var(--color-merino-white);
+    padding: 100px 0;
+  }
+  
+  .why-us__header {
+    margin-bottom: 80px;
+  }
+  
+  .why-us__heading {
+    font-family: var(--font-heading-family);
+    color: var(--color-text-dark);
+    margin-bottom: 24px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+  }
+  
+  .why-us__subheading {
+    font-family: var(--font-body-family);
+    color: var(--color-charcoal-grey);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+  }
+  
+  .why-us__item {
+    text-align: center;
+    padding: 40px 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .why-us__item:hover {
+    transform: translateY(-8px);
+  }
+  
+  .why-us__icon {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .why-us__icon-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .why-us__icon-placeholder {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--color-gold-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold-accent);
+  }
+  
+  .why-us__content {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .why-us__title {
+    font-family: var(--font-heading-family);
+    color: var(--color-premium-navy);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .why-us__description {
+    font-family: var(--font-body-family);
+    color: var(--color-charcoal-grey);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  .why-us__link {
+    font-family: var(--font-body-family);
+    color: var(--color-gold-accent);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .why-us__link:hover {
+    color: var(--color-premium-navy);
+  }
+  
+  .why-us__link svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .why-us__link:hover svg {
+    transform: translateX(4px);
+  }
+  
+  @media screen and (max-width: 989px) {
+    .why-us__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 749px) {
+    .why-us {
+      padding: 60px 0;
+    }
+    
+    .why-us__header {
+      margin-bottom: 40px;
+    }
+    
+    .why-us__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .why-us__item {
+      padding: 30px 20px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Why Us",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Why Choose Harbour & Field",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "We're committed to delivering exceptional quality and service in every aspect of your experience.",
+      "label": "Subheading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "value_prop",
+      "name": "Value Proposition",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Perfect Fit",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "default": "Tailored for Kiwi builds with free alterations to ensure every piece fits perfectly.",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "default": "Learn More",
+          "label": "Link text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Us",
+      "blocks": [
+        {
+          "type": "value_prop",
+          "settings": {
+            "title": "Perfect Fit",
+            "description": "Tailored for Kiwi builds with free alterations to ensure every piece fits perfectly."
+          }
+        },
+        {
+          "type": "value_prop",
+          "settings": {
+            "title": "Premium Fabrics",
+            "description": "NZ Merino wool and Italian mill fabrics for breathable, durable luxury."
+          }
+        },
+        {
+          "type": "value_prop",
+          "settings": {
+            "title": "Sustainability",
+            "description": "Traceable fabrics and long-lasting construction for a responsible wardrobe."
+          }
+        },
+        {
+          "type": "value_prop",
+          "settings": {
+            "title": "Service-Led",
+            "description": "Free alterations, styling advice, and effortless online shopping experience."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
