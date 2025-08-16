@@ -1,7 +1,7 @@
 {
   "sections": {
     "premium_hero": {
-      "type": "premium_hero",
+      "type": "premium-hero",
       "settings": {
         "heading": "Modern Businesswear. Redefined.",
         "subheading": "Premium menswear crafted for the modern professional. Timeless style meets contemporary comfort in every piece.",
@@ -10,7 +10,7 @@
       }
     },
     "capsule_wardrobe": {
-      "type": "capsule_wardrobe",
+      "type": "capsule-wardrobe",
       "settings": {
         "heading": "Capsule Wardrobe",
         "subheading": "Mix and match pieces to create versatile looks that transition seamlessly from office to evening."
@@ -51,7 +51,7 @@
       ]
     },
     "why_us": {
-      "type": "why_us",
+      "type": "why-us",
       "settings": {
         "heading": "Why Choose Harbour & Field",
         "subheading": "We're committed to delivering exceptional quality and service in every aspect of your experience."
