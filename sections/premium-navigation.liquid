@@ -22,20 +22,76 @@
 
     <!-- Main Navigation -->
     <ul class="nav__menu">
-      {% for link in section.settings.menu.links %}
-        <li class="nav__item">
-          <a href="{{ link.url }}" class="nav__link">{{ link.title }}</a>
-          {% if link.links != blank %}
-            <ul class="nav__submenu">
-              {% for child_link in link.links %}
-                <li class="nav__subitem">
-                  <a href="{{ child_link.url }}" class="nav__sublink">{{ child_link.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </li>
-      {% endfor %}
+      <li class="nav__item">
+        <a href="/collections/boardroom-ready" class="nav__link">Boardroom Ready</a>
+        <ul class="nav__submenu">
+          <li class="nav__subitem">
+            <a href="/collections/boardroom-ready" class="nav__sublink">Tailored Jackets</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/boardroom-ready" class="nav__sublink">Dress Shirts</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/boardroom-ready" class="nav__sublink">Trousers</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="/collections/smart-casual" class="nav__link">Smart Casual</a>
+        <ul class="nav__submenu">
+          <li class="nav__subitem">
+            <a href="/collections/smart-casual" class="nav__sublink">Blazers</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/smart-casual" class="nav__sublink">Chinos</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/smart-casual" class="nav__sublink">Polo Shirts</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="/collections/evening-elegance" class="nav__link">Evening Elegance</a>
+        <ul class="nav__submenu">
+          <li class="nav__subitem">
+            <a href="/collections/evening-elegance" class="nav__sublink">Evening Jackets</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/evening-elegance" class="nav__sublink">Dress Shirts</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/evening-elegance" class="nav__sublink">Accessories</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="/collections/everyday-essentials" class="nav__link">Everyday Essentials</a>
+        <ul class="nav__submenu">
+          <li class="nav__subitem">
+            <a href="/collections/everyday-essentials" class="nav__sublink">Basic Tees</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/everyday-essentials" class="nav__sublink">Jeans</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/everyday-essentials" class="nav__sublink">Sweaters</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="/collections/accessories" class="nav__link">Accessories</a>
+        <ul class="nav__submenu">
+          <li class="nav__subitem">
+            <a href="/collections/accessories" class="nav__sublink">Ties</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/accessories" class="nav__sublink">Belts</a>
+          </li>
+          <li class="nav__subitem">
+            <a href="/collections/accessories" class="nav__sublink">Wallets</a>
+          </li>
+        </ul>
+      </li>
     </ul>
 
     <!-- Search and Cart -->

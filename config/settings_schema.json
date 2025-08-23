@@ -102,11 +102,11 @@
     ]
   },
   {
-    "name": "Premium E-commerce Colors",
+    "name": "Premium Color Palette",
     "settings": [
       {
         "type": "header",
-        "content": "Brand Color Palette"
+        "content": "Neutral Monochromes"
       },
       {
         "type": "color",
@@ -145,10 +145,20 @@
         "default": "#333333"
       },
       {
+        "type": "header",
+        "content": "Subtle Accents"
+      },
+      {
         "type": "color",
-        "id": "accent_gold",
-        "label": "Accent Gold",
-        "default": "#D4AF37"
+        "id": "navy_accent",
+        "label": "Navy Accent",
+        "default": "#1B2A3A"
+      },
+      {
+        "type": "color",
+        "id": "taupe_accent",
+        "label": "Taupe Accent",
+        "default": "#8B7355"
       }
     ]
   },
@@ -162,7 +172,7 @@
       {
         "type": "font_picker",
         "id": "type_header_font",
-        "default": "inter_n4",
+        "default": "playfair_display_n4",
         "label": "t:settings_schema.typography.settings.type_header_font.label"
       },
       {

@@ -6,21 +6,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Premium Menswear for the Modern Professional",
+            "heading": "Modern Businesswear. Redefined.",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Timeless pieces crafted for the contemporary man who values quality, style, and versatility.",
+            "text": "Premium fabrics. Timeless design. Effortless sophistication.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
+            "button_label_1": "Shop the Collection",
             "button_link_1": "/collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -35,7 +35,7 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 25,
         "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
@@ -46,10 +46,76 @@
         "show_text_below": false
       }
     },
+    "category_callouts": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "swipe_on_mobile": false,
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "boardroom": {
+          "type": "column",
+          "settings": {
+            "title": "Boardroom Ready",
+            "text": "<p>Tailored jackets and shirts designed to make an impact in every meeting.</p>",
+            "link_label": "Shop Boardroom",
+            "link": "/collections/boardroom-ready",
+            "image": ""
+          }
+        },
+        "smart_casual": {
+          "type": "column",
+          "settings": {
+            "title": "Smart Casual",
+            "text": "<p>Versatile staples that move seamlessly from desk to dinner.</p>",
+            "link_label": "Shop Smart Casual",
+            "link": "/collections/smart-casual",
+            "image": ""
+          }
+        },
+        "evening": {
+          "type": "column",
+          "settings": {
+            "title": "Evening Elegance",
+            "text": "<p>Polished essentials for refined nights out.</p>",
+            "link_label": "Shop Evening",
+            "link": "/collections/evening-elegance",
+            "image": ""
+          }
+        },
+        "essentials": {
+          "type": "column",
+          "settings": {
+            "title": "Everyday Essentials",
+            "text": "<p>Wardrobe foundations crafted to last.</p>",
+            "link_label": "Shop Essentials",
+            "link": "/collections/everyday-essentials",
+            "image": ""
+          }
+        }
+      },
+      "block_order": [
+        "boardroom",
+        "smart_casual",
+        "evening",
+        "essentials"
+      ]
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "New Arrivals",
+        "title": "Featured Collection",
         "heading_size": "h2",
         "collection": "all",
         "products_to_show": 8,
@@ -66,59 +132,36 @@
         "padding_bottom": 36
       }
     },
-    "collection_list": {
-      "type": "collection-list",
-      "settings": {
-        "title": "Shop by Category",
-        "heading_size": "h2",
-        "image_ratio": "adapt",
-        "columns_desktop": 5,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      },
+    "brand_story": {
+      "type": "rich-text",
       "blocks": {
-        "collection_1": {
-          "type": "featured_collection",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "collection": ""
+            "heading": "Crafted for the Modern Professional",
+            "heading_size": "h1"
           }
         },
-        "collection_2": {
-          "type": "featured_collection",
+        "text": {
+          "type": "text",
           "settings": {
-            "collection": ""
-          }
-        },
-        "collection_3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "collection_4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "collection_5": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
+            "text": "<p>At Harbour & Field, we believe businesswear should be as effortless as it is elegant. Each piece is designed with a balance of structure and comfort—crafted in premium fabrics that stand the test of time.</p>"
           }
         }
       },
       "block_order": [
-        "collection_1",
-        "collection_2",
-        "collection_3",
-        "collection_4",
-        "collection_5"
-      ]
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
-    "image_with_text": {
+    "about_us": {
       "type": "image-with-text",
       "settings": {
         "height": "adapt",
@@ -132,20 +175,20 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Crafted for Excellence",
+            "heading": "Our Story",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Every piece in our collection is thoughtfully designed with premium fabrics and timeless silhouettes. We focus on creating versatile garments that seamlessly transition from boardroom to evening, ensuring you always look and feel your best.</p><p>Our commitment to quality craftsmanship and sustainable practices means each garment is built to last, becoming a trusted part of your wardrobe for years to come.</p>"
+            "text": "<p>Founded with a vision to redefine men's workwear, Harbour & Field delivers timeless designs for the modern professional. Inspired by global boardrooms and everyday ambition, our collections are crafted to help you look sharp and feel confident in every setting.</p>"
           }
         },
         "button": {
           "type": "button",
           "settings": {
-            "button_label": "Discover Our Story",
+            "button_label": "Learn More",
             "button_link": "/pages/about-us",
             "button_style_secondary": true
           }
@@ -156,28 +199,6 @@
         "text",
         "button"
       ]
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "What Our Customers Say",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "settings": {
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
     },
     "newsletter": {
       "type": "newsletter",
@@ -191,10 +212,10 @@
   },
   "order": [
     "hero_banner",
+    "category_callouts",
     "featured_collection",
-    "collection_list",
-    "image_with_text",
-    "rich_text",
+    "brand_story",
+    "about_us",
     "newsletter"
   ]
 }
