@@ -212,7 +212,7 @@ For support and customization requests:
 ## 📄 License
 
 This theme is proprietary to Harbour & Field. All rights reserved.
-
+added SHOP_PULL_THEME
 ---
 
 
