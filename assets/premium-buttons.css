@@ -1,0 +1,243 @@
+/* Harbour & Field Premium Button System */
+/* Enforces consistent CTA styling and spacing across the site */
+
+/* Global Button Overrides */
+.btn,
+.Button,
+button[type='button'],
+.shopify-payment-button__button,
+.button,
+input[type='submit'],
+input[type='button'] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  max-width: 260px !important;
+  width: auto !important;
+  min-width: unset !important;
+  height: 44px !important;
+  line-height: 1.1 !important;
+  padding: 12px 18px !important;
+  border-radius: 10px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  font-family: var(--font-body-family) !important;
+}
+
+/* Large Button Overrides */
+.btn--large,
+.Button--large,
+.button--large {
+  font-size: 15px !important;
+  padding: 12px 18px !important;
+  max-width: 260px !important;
+  height: 44px !important;
+}
+
+/* Secondary Button Style */
+.btn--secondary,
+.Button--secondary,
+.button--secondary {
+  background: transparent !important;
+  color: var(--color-text-primary) !important;
+  border: 2px solid var(--color-text-primary) !important;
+  padding: 10px 16px !important;
+  height: 42px !important;
+  max-width: 260px !important;
+}
+
+.btn--secondary:hover,
+.Button--secondary:hover,
+.button--secondary:hover {
+  background: var(--color-text-primary) !important;
+  color: var(--color-background) !important;
+}
+
+/* Link Button Style */
+.btn--link,
+.Button--link,
+.button--link {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  max-width: none !important;
+  text-decoration: underline !important;
+  color: var(--color-accent) !important;
+}
+
+.btn--link:hover,
+.Button--link:hover,
+.button--link:hover {
+  text-decoration: none !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* Section Spacing Enforcement */
+.section,
+[data-section] {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+.section--tight {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important;
+}
+
+/* Container Constraints */
+.container,
+.page-width {
+  max-width: 1240px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* Premium Hero Button Specific */
+.premium-hero__button {
+  background: var(--color-gold-accent) !important;
+  color: var(--color-text-dark) !important;
+  border: none !important;
+  padding: 12px 18px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.3s ease !important;
+  border-radius: 10px !important;
+  max-width: 260px !important;
+  height: 44px !important;
+}
+
+.premium-hero__button:hover {
+  background: var(--color-merino-white) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+}
+
+/* Newsletter Button */
+.newsletter__button {
+  background: var(--color-text-primary) !important;
+  color: var(--color-background) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  padding: 12px 18px !important;
+  max-width: 260px !important;
+  height: 44px !important;
+}
+
+.newsletter__button:hover {
+  background: var(--color-accent) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Featured Collection Button */
+.featured-collection__view-all {
+  background: var(--color-text-primary) !important;
+  color: var(--color-background) !important;
+  border: 2px solid var(--color-text-primary) !important;
+  padding: 12px 18px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.3s ease !important;
+  border-radius: 10px !important;
+  max-width: 260px !important;
+  height: 44px !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.featured-collection__view-all:hover {
+  background: var(--color-background) !important;
+  color: var(--color-text-primary) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Category Callout Links */
+.category-callout__link {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  max-width: none !important;
+  text-decoration: underline !important;
+  color: var(--color-accent) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.category-callout__link:hover {
+  text-decoration: none !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* Focus States for Accessibility */
+.btn:focus,
+.Button:focus,
+button[type='button']:focus,
+.shopify-payment-button__button:focus,
+.button:focus,
+input[type='submit']:focus,
+input[type='button']:focus {
+  outline: 2px solid rgba(14,34,51,0.6) !important;
+  outline-offset: 3px !important;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 749px) {
+  .section,
+  [data-section] {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  
+  .section--tight {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  
+  .container,
+  .page-width {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .btn,
+  .Button,
+  button[type='button'],
+  .shopify-payment-button__button,
+  .button,
+  input[type='submit'],
+  input[type='button'] {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* Block Large CTA Prevention */
+[data-section-type="button"]:not([data-section-type*="hero"]):not([data-section-type*="product"]) {
+  display: none !important;
+}
+
+/* Deny Large Block CTA */
+.cta-block--large,
+.cta-section--large {
+  display: none !important;
+}
