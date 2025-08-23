@@ -35,7 +35,7 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 10,
         "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
@@ -53,13 +53,13 @@
         "heading_size": "h2",
         "image_width": "full",
         "swipe_on_mobile": false,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -68,7 +68,7 @@
           "type": "column",
           "settings": {
             "title": "Boardroom Ready",
-            "text": "<p>Tailored jackets and shirts designed to make an impact in every meeting.</p>",
+            "text": "<p>Sharp jackets, refined shirts, faultless trousers.</p>",
             "link_label": "Shop Boardroom",
             "link": "/collections/boardroom-ready",
             "image": ""
@@ -78,7 +78,7 @@
           "type": "column",
           "settings": {
             "title": "Smart Casual",
-            "text": "<p>Versatile staples that move seamlessly from desk to dinner.</p>",
+            "text": "<p>Versatile layers from desk to dinner.</p>",
             "link_label": "Shop Smart Casual",
             "link": "/collections/smart-casual",
             "image": ""
@@ -88,19 +88,9 @@
           "type": "column",
           "settings": {
             "title": "Evening Elegance",
-            "text": "<p>Polished essentials for refined nights out.</p>",
+            "text": "<p>Polished pieces for after-hours.</p>",
             "link_label": "Shop Evening",
             "link": "/collections/evening-elegance",
-            "image": ""
-          }
-        },
-        "essentials": {
-          "type": "column",
-          "settings": {
-            "title": "Everyday Essentials",
-            "text": "<p>Wardrobe foundations crafted to last.</p>",
-            "link_label": "Shop Essentials",
-            "link": "/collections/everyday-essentials",
             "image": ""
           }
         }
@@ -108,8 +98,7 @@
       "block_order": [
         "boardroom",
         "smart_casual",
-        "evening",
-        "essentials"
+        "evening"
       ]
     },
     "featured_collection": {
@@ -118,15 +107,15 @@
         "title": "Featured Collection",
         "heading_size": "h2",
         "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "products_to_show": 6,
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
         "show_view_all": true,
         "swipe_on_mobile": false,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
@@ -145,7 +134,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>At Harbour & Field, we believe businesswear should be as effortless as it is elegant. Each piece is designed with a balance of structure and comfort—crafted in premium fabrics that stand the test of time.</p>"
+            "text": "<p>We balance structure and comfort in premium fabrics, delivering pieces that perform from boardroom to evening.</p>"
           }
         }
       },
@@ -160,6 +149,29 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "editorial_strip": {
+      "type": "image-with-text",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Understated, considered, enduring.",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ]
     },
     "about_us": {
       "type": "image-with-text",
@@ -188,8 +200,8 @@
         "button": {
           "type": "button",
           "settings": {
-            "button_label": "Learn More",
-            "button_link": "/pages/about-us",
+            "button_label": "Explore Our Story",
+            "button_link": "/pages/about",
             "button_style_secondary": true
           }
         }
@@ -203,8 +215,8 @@
     "newsletter": {
       "type": "newsletter",
       "settings": {
-        "heading": "Stay Updated",
-        "subtext": "<p>Be the first to know about new collections, exclusive offers, and styling inspiration.</p>",
+        "heading": "Keep Your Edge",
+        "subtext": "<p>New drops, restocks, and wardrobe guidance—straight to your inbox.</p>",
         "button_label": "Subscribe",
         "show_background": true
       }
@@ -215,6 +227,7 @@
     "category_callouts",
     "featured_collection",
     "brand_story",
+    "editorial_strip",
     "about_us",
     "newsletter"
   ]

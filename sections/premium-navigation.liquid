@@ -23,58 +23,69 @@
     <!-- Main Navigation -->
     <ul class="nav__menu">
       <li class="nav__item">
-        <a href="/collections/boardroom-ready" class="nav__link">Boardroom Ready</a>
+        <a href="/collections/new" class="nav__link">New</a>
+      </li>
+      <li class="nav__item">
+        <a href="/collections/shirts" class="nav__link">Shirts</a>
         <ul class="nav__submenu">
           <li class="nav__subitem">
-            <a href="/collections/boardroom-ready" class="nav__sublink">Tailored Jackets</a>
+            <a href="/collections/boardroom-ready" class="nav__sublink">Boardroom Ready</a>
           </li>
           <li class="nav__subitem">
-            <a href="/collections/boardroom-ready" class="nav__sublink">Dress Shirts</a>
+            <a href="/collections/smart-casual" class="nav__sublink">Smart Casual</a>
           </li>
           <li class="nav__subitem">
-            <a href="/collections/boardroom-ready" class="nav__sublink">Trousers</a>
+            <a href="/collections/evening-elegance" class="nav__sublink">Evening</a>
           </li>
         </ul>
       </li>
       <li class="nav__item">
-        <a href="/collections/smart-casual" class="nav__link">Smart Casual</a>
+        <a href="/collections/jackets-blazers" class="nav__link">Jackets & Blazers</a>
         <ul class="nav__submenu">
           <li class="nav__subitem">
-            <a href="/collections/smart-casual" class="nav__sublink">Blazers</a>
+            <a href="/collections/boardroom-ready" class="nav__sublink">Boardroom Ready</a>
           </li>
           <li class="nav__subitem">
-            <a href="/collections/smart-casual" class="nav__sublink">Chinos</a>
+            <a href="/collections/smart-casual" class="nav__sublink">Smart Casual</a>
           </li>
           <li class="nav__subitem">
-            <a href="/collections/smart-casual" class="nav__sublink">Polo Shirts</a>
+            <a href="/collections/evening-elegance" class="nav__sublink">Evening</a>
           </li>
         </ul>
       </li>
       <li class="nav__item">
-        <a href="/collections/evening-elegance" class="nav__link">Evening Elegance</a>
+        <a href="/collections/trousers" class="nav__link">Trousers</a>
         <ul class="nav__submenu">
           <li class="nav__subitem">
-            <a href="/collections/evening-elegance" class="nav__sublink">Evening Jackets</a>
+            <a href="/collections/boardroom-ready" class="nav__sublink">Boardroom Ready</a>
           </li>
           <li class="nav__subitem">
-            <a href="/collections/evening-elegance" class="nav__sublink">Dress Shirts</a>
+            <a href="/collections/smart-casual" class="nav__sublink">Smart Casual</a>
           </li>
           <li class="nav__subitem">
-            <a href="/collections/evening-elegance" class="nav__sublink">Accessories</a>
+            <a href="/collections/evening-elegance" class="nav__sublink">Evening</a>
           </li>
         </ul>
       </li>
       <li class="nav__item">
-        <a href="/collections/everyday-essentials" class="nav__link">Everyday Essentials</a>
+        <a href="/collections/knitwear" class="nav__link">Knitwear</a>
         <ul class="nav__submenu">
           <li class="nav__subitem">
-            <a href="/collections/everyday-essentials" class="nav__sublink">Basic Tees</a>
+            <a href="/collections/smart-casual" class="nav__sublink">Smart Casual</a>
           </li>
           <li class="nav__subitem">
-            <a href="/collections/everyday-essentials" class="nav__sublink">Jeans</a>
+            <a href="/collections/evening-elegance" class="nav__sublink">Evening</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="/collections/outerwear" class="nav__link">Outerwear</a>
+        <ul class="nav__submenu">
+          <li class="nav__subitem">
+            <a href="/collections/smart-casual" class="nav__sublink">Smart Casual</a>
           </li>
           <li class="nav__subitem">
-            <a href="/collections/everyday-essentials" class="nav__sublink">Sweaters</a>
+            <a href="/collections/evening-elegance" class="nav__sublink">Evening</a>
           </li>
         </ul>
       </li>
@@ -115,6 +126,15 @@
         </div>
       {% endif %}
 
+      <div class="nav__account">
+        <a href="/account" class="nav__account-link" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 10C12.7614 10 15 7.76142 15 5C15 2.23858 12.7614 0 10 0C7.23858 0 5 2.23858 5 5C5 7.76142 7.23858 10 10 10Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M20 20C20 15.5817 15.5228 12 10 12C4.47715 12 0 15.5817 0 20" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </a>
+      </div>
+
       <div class="nav__cart">
         <a href="/cart" class="cart-icon" aria-label="Cart">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -140,8 +160,8 @@
 
 {% stylesheet %}
 .nav--premium {
-  background: var(--color-white);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-lines);
   padding: var(--spacing-md) 0;
   position: sticky;
   top: 0;
@@ -152,9 +172,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 var(--gutter);
 }
 
 .nav__logo-container {
@@ -186,7 +206,7 @@
 
 .nav__link {
   font-family: var(--font-body-family);
-  font-size: 14px;
+  font-size: var(--font-size-small);
   font-weight: 500;
   color: var(--color-text-secondary);
   text-decoration: none;
@@ -205,8 +225,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  border: 1px solid var(--color-lines);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-medium);
   min-width: 200px;
@@ -230,12 +250,12 @@
   padding: var(--spacing-sm) var(--spacing-md);
   color: var(--color-text-secondary);
   text-decoration: none;
-  font-size: 14px;
+  font-size: var(--font-size-small);
   transition: background-color var(--transition-normal);
 }
 
 .nav__sublink:hover {
-  background: var(--color-background-alt);
+  background: rgba(15, 17, 21, 0.04);
   color: var(--color-text-primary);
 }
 
@@ -262,17 +282,17 @@
 .search-bar__input {
   width: 100%;
   padding: 12px 40px 12px 16px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-lines);
   border-radius: var(--radius-sm);
   font-family: var(--font-body-family);
-  font-size: 14px;
-  background: var(--color-white);
+  font-size: var(--font-size-small);
+  background: var(--color-background);
   transition: border-color var(--transition-normal);
 }
 
 .search-bar__input:focus {
   outline: none;
-  border-color: var(--color-black);
+  border-color: var(--color-accent);
 }
 
 .search-bar__button {
@@ -282,7 +302,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: var(--color-text-light);
+  color: var(--color-text-secondary);
   cursor: pointer;
   padding: 0;
   display: flex;
@@ -292,6 +312,24 @@
 }
 
 .search-bar__button:hover {
+  color: var(--color-text-primary);
+}
+
+.nav__account {
+  position: relative;
+}
+
+.nav__account-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: var(--spacing-sm);
+  transition: color var(--transition-normal);
+}
+
+.nav__account-link:hover {
   color: var(--color-text-primary);
 }
 
@@ -318,8 +356,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--color-accent);
+  color: var(--color-background);
   font-size: 10px;
   font-weight: 600;
   width: 18px;
@@ -361,7 +399,7 @@
   }
   
   .nav__container {
-    padding: 0 var(--spacing-sm);
+    padding: 0 var(--gutter);
   }
 }
 
@@ -421,8 +459,8 @@ class PremiumNavigation {
     this.menu.style.top = '100%';
     this.menu.style.left = '0';
     this.menu.style.right = '0';
-    this.menu.style.background = 'var(--color-white)';
-    this.menu.style.borderTop = '1px solid var(--color-border)';
+    this.menu.style.background = 'var(--color-background)';
+    this.menu.style.borderTop = '1px solid var(--color-lines)';
     this.menu.style.padding = 'var(--spacing-md)';
     this.menu.style.boxShadow = 'var(--shadow-medium)';
   }
