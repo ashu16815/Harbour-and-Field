@@ -1,104 +1,104 @@
 {
   "sections": {
-    "hero_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Modern Businesswear. Redefined.",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Premium fabrics. Timeless design. Effortless sophistication.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop the Collection",
-            "button_link_1": "/collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+    "premium_hero": {
+      "type": "premium-hero",
       "settings": {
-        "image_overlay_opacity": 10,
-        "image_height": "large",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "heading": "Modern Businesswear. Redefined.",
+        "subheading": "Premium menswear crafted for the modern professional. Timeless style meets contemporary comfort in every piece.",
+        "button_label": "Shop the Collection",
+        "button_link": "/collections/all"
       }
     },
-    "category_callouts": {
-      "type": "multicolumn",
+    "capsule_wardrobe": {
+      "type": "capsule-wardrobe",
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "swipe_on_mobile": false,
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Capsule Wardrobe",
+        "subheading": "Mix and match pieces to create versatile looks that transition seamlessly from office to evening."
       },
       "blocks": {
-        "boardroom": {
-          "type": "column",
+        "outfit_1": {
+          "type": "outfit",
           "settings": {
-            "title": "Boardroom Ready",
-            "text": "<p>Sharp jackets, refined shirts, faultless trousers.</p>",
-            "link_label": "Shop Boardroom",
-            "link": "/collections/boardroom-ready",
-            "image": ""
+            "outfit_title": "Boardroom Ready",
+            "description": "A sophisticated ensemble perfect for important meetings and presentations.",
+            "shop_all_label": "Shop This Look",
+            "shop_all_link": "/collections/all"
           }
         },
-        "smart_casual": {
-          "type": "column",
+        "outfit_2": {
+          "type": "outfit",
           "settings": {
-            "title": "Smart Casual",
-            "text": "<p>Versatile layers from desk to dinner.</p>",
-            "link_label": "Shop Smart Casual",
-            "link": "/collections/smart-casual",
-            "image": ""
+            "outfit_title": "Smart Casual",
+            "description": "Elevated everyday wear that maintains professionalism while offering comfort.",
+            "shop_all_label": "Shop This Look",
+            "shop_all_link": "/collections/all"
           }
         },
-        "evening": {
-          "type": "column",
+        "outfit_3": {
+          "type": "outfit",
           "settings": {
-            "title": "Evening Elegance",
-            "text": "<p>Polished pieces for after-hours.</p>",
-            "link_label": "Shop Evening",
-            "link": "/collections/evening-elegance",
-            "image": ""
+            "outfit_title": "Evening Elegance",
+            "description": "Refined pieces that transition effortlessly from work to evening events.",
+            "shop_all_label": "Shop This Look",
+            "shop_all_link": "/collections/all"
           }
         }
       },
       "block_order": [
-        "boardroom",
-        "smart_casual",
-        "evening"
+        "outfit_1",
+        "outfit_2",
+        "outfit_3"
+      ]
+    },
+    "why_us": {
+      "type": "why_us",
+      "settings": {
+        "heading": "Why Choose Harbour & Field",
+        "subheading": "We're committed to delivering exceptional quality and service in every aspect of your experience."
+      },
+      "blocks": {
+        "fit": {
+          "type": "value_prop",
+          "settings": {
+            "title": "Perfect Fit",
+            "description": "Tailored for Kiwi builds with free alterations to ensure every piece fits perfectly.",
+            "link_text": "Learn More",
+            "link_url": "/pages/fit-promise"
+          }
+        },
+        "fabric": {
+          "type": "value_prop",
+          "settings": {
+            "title": "Premium Fabrics",
+            "description": "NZ Merino wool and Italian mill fabrics for breathable, durable luxury.",
+            "link_text": "Learn More",
+            "link_url": "/pages/fabric-sourcing"
+          }
+        },
+        "sustainability": {
+          "type": "value_prop",
+          "settings": {
+            "title": "Sustainability",
+            "description": "Traceable fabrics and long-lasting construction for a responsible wardrobe.",
+            "link_text": "Learn More",
+            "link_url": "/pages/sustainability"
+          }
+        },
+        "service": {
+          "type": "value_prop",
+          "settings": {
+            "title": "Service-Led",
+            "description": "Free alterations, styling advice, and effortless online shopping experience.",
+            "link_text": "Learn More",
+            "link_url": "/pages/services"
+          }
+        }
+      },
+      "block_order": [
+        "fit",
+        "fabric",
+        "sustainability",
+        "service"
       ]
     },
     "featured_collection": {
@@ -121,58 +121,6 @@
         "padding_bottom": 36
       }
     },
-    "brand_story": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Crafted for the Modern Professional",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We balance structure and comfort in premium fabrics, delivering pieces that perform from boardroom to evening.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "editorial_strip": {
-      "type": "image-with-text",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1"
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Understated. Considered. Enduring.",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ]
-    },
     "newsletter": {
       "type": "newsletter",
       "settings": {
@@ -184,11 +132,10 @@
     }
   },
   "order": [
-    "hero_banner",
-    "category_callouts",
+    "premium_hero",
+    "capsule_wardrobe",
+    "why_us",
     "featured_collection",
-    "brand_story",
-    "editorial_strip",
     "newsletter"
   ]
 }

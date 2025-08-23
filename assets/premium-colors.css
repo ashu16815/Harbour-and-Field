@@ -9,6 +9,14 @@
   --color-accent: #0E2233 !important;
   --color-lines: rgba(15, 17, 21, 0.08) !important;
   
+  /* Harbour & Field Brand Colors */
+  --color-premium-navy: #0E2233 !important;
+  --color-charcoal-grey: #2C3E50 !important;
+  --color-merino-white: #F8F9FA !important;
+  --color-warm-cream: #F5F5F0 !important;
+  --color-gold-accent: #D4AF37 !important;
+  --color-text-dark: #0F1115 !important;
+  
   /* Typography - Canela + Inter */
   --font-heading-family: 'Canela', Georgia, serif !important;
   --font-body-family: 'Inter', system-ui, sans-serif !important;

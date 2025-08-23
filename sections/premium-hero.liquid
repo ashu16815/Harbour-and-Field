@@ -50,6 +50,18 @@
               class="premium-hero__image"
             >
           </div>
+        {% else %}
+          <div class="premium-hero__image-wrapper">
+            <div class="premium-hero__placeholder">
+              <svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="500" fill="#2C3E50" opacity="0.1"/>
+                <path d="M200 150C177.909 150 160 167.909 160 190C160 212.091 177.909 230 200 230C222.091 230 240 212.091 240 190C240 167.909 222.091 150 200 150ZM200 220C185.641 220 174 208.359 174 194C174 179.641 185.641 168 200 168C214.359 168 226 179.641 226 194C226 208.359 214.359 220 200 220Z" fill="#2C3E50" opacity="0.3"/>
+                <path d="M120 280H280V320H120V280Z" fill="#2C3E50" opacity="0.3"/>
+                <path d="M140 340H260V360H140V340Z" fill="#2C3E50" opacity="0.3"/>
+                <path d="M160 370H240V390H160V370Z" fill="#2C3E50" opacity="0.3"/>
+              </svg>
+            </div>
+          </div>
         {% endif %}
       </div>
     </div>
