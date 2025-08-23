@@ -2,6 +2,7 @@ name: CI
 on: [push]
 jobs:
   lhci:
+    if: ${{ secrets.SHOP_STORE_OS2 && secrets.SHOP_PASSWORD_OS2 && secrets.SHOP_ACCESS_TOKEN && secrets.LHCI_GITHUB_TOKEN && secrets.SHOP_PULL_THEME }}
     name: Lighthouse
     runs-on: ubuntu-latest
     steps:
