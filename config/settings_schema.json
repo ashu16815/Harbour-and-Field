@@ -1,11 +1,11 @@
 [
   {
-    "name": "t:settings_schema.theme_info.name",
+    "name": "theme_info",
     "theme_name": "Harbour & Field Premium",
     "theme_version": "1.0.0",
     "theme_author": "Harbour & Field",
-    "theme_documentation_url": "",
-    "theme_support_url": ""
+    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+    "theme_support_url": "https://support.shopify.com/"
   },
   {
     "name": "t:settings_schema.colors.name",
@@ -45,7 +45,7 @@
       {
         "type": "color",
         "id": "colors_background_1",
-        "default": "rgba(15,17,21,0.08)",
+        "default": "#F8F8F8",
         "label": "Lines & Borders",
         "info": "Used for borders and subtle lines"
       }
@@ -61,7 +61,7 @@
       {
         "type": "font_picker",
         "id": "type_header_font",
-        "default": "canela_n4",
+        "default": "playfair_display_n4",
         "label": "t:settings_schema.typography.settings.type_header_font.label",
         "info": "Used for headings and display text"
       },
@@ -158,7 +158,7 @@
         "min": 1000,
         "max": 1600,
         "step": 100,
-        "default": 1240,
+        "default": 1200,
         "unit": "px",
         "label": "Maximum page width"
       },
