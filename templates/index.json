@@ -1,113 +1,58 @@
 {
   "sections": {
-    "premium_hero": {
-      "type": "premium-hero",
+    "hero_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium Menswear for the Modern Professional",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Timeless pieces crafted for the contemporary man who values quality, style, and versatility.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "/collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
-        "heading": "Modern Businesswear. Redefined.",
-        "subheading": "Premium menswear crafted for the modern professional. Timeless style meets contemporary comfort in every piece.",
-        "button_label": "Shop the Collection",
-        "button_link": "/collections/all"
+        "image_overlay_opacity": 30,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
-    },
-    "capsule_wardrobe": {
-      "type": "capsule-wardrobe",
-      "settings": {
-        "heading": "Capsule Wardrobe",
-        "subheading": "Mix and match pieces to create versatile looks that transition seamlessly from office to evening."
-      },
-      "blocks": {
-        "outfit_1": {
-          "type": "outfit",
-          "settings": {
-            "outfit_title": "Boardroom Ready",
-            "description": "A sophisticated ensemble perfect for important meetings and presentations.",
-            "shop_all_label": "Shop This Look",
-            "shop_all_link": "/collections/all"
-          }
-        },
-        "outfit_2": {
-          "type": "outfit",
-          "settings": {
-            "outfit_title": "Smart Casual",
-            "description": "Elevated everyday wear that maintains professionalism while offering comfort.",
-            "shop_all_label": "Shop This Look",
-            "shop_all_link": "/collections/all"
-          }
-        },
-        "outfit_3": {
-          "type": "outfit",
-          "settings": {
-            "outfit_title": "Evening Elegance",
-            "description": "Refined pieces that transition effortlessly from work to evening events.",
-            "shop_all_label": "Shop This Look",
-            "shop_all_link": "/collections/all"
-          }
-        }
-      },
-      "block_order": [
-        "outfit_1",
-        "outfit_2",
-        "outfit_3"
-      ]
-    },
-    "why_us": {
-      "type": "why-us",
-      "settings": {
-        "heading": "Why Choose Harbour & Field",
-        "subheading": "We're committed to delivering exceptional quality and service in every aspect of your experience."
-      },
-      "blocks": {
-        "fit": {
-          "type": "value_prop",
-          "settings": {
-            "title": "Perfect Fit",
-            "description": "Tailored for Kiwi builds with free alterations to ensure every piece fits perfectly.",
-            "link_text": "Learn More",
-            "link_url": "/pages/fit-promise"
-          }
-        },
-        "fabric": {
-          "type": "value_prop",
-          "settings": {
-            "title": "Premium Fabrics",
-            "description": "NZ Merino wool and Italian mill fabrics for breathable, durable luxury.",
-            "link_text": "Learn More",
-            "link_url": "/pages/fabric-sourcing"
-          }
-        },
-        "sustainability": {
-          "type": "value_prop",
-          "settings": {
-            "title": "Sustainability",
-            "description": "Traceable fabrics and long-lasting construction for a responsible wardrobe.",
-            "link_text": "Learn More",
-            "link_url": "/pages/sustainability"
-          }
-        },
-        "service": {
-          "type": "value_prop",
-          "settings": {
-            "title": "Service-Led",
-            "description": "Free alterations, styling advice, and effortless online shopping experience.",
-            "link_text": "Learn More",
-            "link_url": "/pages/services"
-          }
-        }
-      },
-      "block_order": [
-        "fit",
-        "fabric",
-        "sustainability",
-        "service"
-      ]
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured Collection",
+        "title": "New Arrivals",
         "heading_size": "h2",
         "collection": "all",
-        "products_to_show": 4,
+        "products_to_show": 8,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "show_view_all": true,
@@ -115,11 +60,107 @@
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "columns_mobile": "2",
-        "padding_top": 28,
+        "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_list": {
+      "type": "collection-list",
+      "settings": {
+        "title": "Shop by Category",
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "collection_1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "Shirts"
+          }
+        },
+        "collection_2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "Jackets"
+          }
+        },
+        "collection_3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "Trousers"
+          }
+        },
+        "collection_4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "Outerwear"
+          }
+        },
+        "collection_5": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "Accessories"
+          }
+        }
+      },
+      "block_order": [
+        "collection_1",
+        "collection_2",
+        "collection_3",
+        "collection_4",
+        "collection_5"
+      ]
+    },
+    "image_with_text": {
+      "type": "image-with-text",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crafted for Excellence",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every piece in our collection is thoughtfully designed with premium fabrics and timeless silhouettes. We focus on creating versatile garments that seamlessly transition from boardroom to evening, ensuring you always look and feel your best.</p><p>Our commitment to quality craftsmanship and sustainable practices means each garment is built to last, becoming a trusted part of your wardrobe for years to come.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover Our Story",
+            "button_link": "/pages/about-us",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ]
     },
     "rich_text": {
       "type": "rich-text",
@@ -127,43 +168,37 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Crafted for the Modern Professional",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>At Harbour & Field, we understand that today's professionals need more than just clothing—they need a wardrobe that works as hard as they do. Our pieces are designed to transition seamlessly from boardroom meetings to evening events, offering the perfect balance of style, comfort, and versatility.</p><p>Each garment is crafted with premium New Zealand Merino wool and Italian mill fabrics, ensuring breathability, durability, and timeless elegance. Our commitment to sustainable practices means you can feel good about every purchase, knowing it's built to last.</p>"
+            "heading": "What Our Customers Say",
+            "heading_size": "h2"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "heading"
       ],
       "settings": {
+        "desktop_content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "newsletter": {
       "type": "newsletter",
       "settings": {
         "heading": "Stay Updated",
-        "subtext": "<p>Be the first to know about new collections, exclusive offers, and styling tips from our experts.</p>",
+        "subtext": "<p>Be the first to know about new collections, exclusive offers, and styling inspiration.</p>",
         "button_label": "Subscribe",
         "show_background": true
       }
     }
   },
   "order": [
-    "premium_hero",
-    "capsule_wardrobe",
-    "why_us",
+    "hero_banner",
     "featured_collection",
+    "collection_list",
+    "image_with_text",
     "rich_text",
     "newsletter"
   ]
