@@ -53,13 +53,15 @@
         {% else %}
           <div class="premium-hero__image-wrapper">
             <div class="premium-hero__placeholder">
-              <svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="400" height="500" fill="#2C3E50" opacity="0.1"/>
-                <path d="M200 150C177.909 150 160 167.909 160 190C160 212.091 177.909 230 200 230C222.091 230 240 212.091 240 190C240 167.909 222.091 150 200 150ZM200 220C185.641 220 174 208.359 174 194C174 179.641 185.641 168 200 168C214.359 168 226 179.641 226 194C226 208.359 214.359 220 200 220Z" fill="#2C3E50" opacity="0.3"/>
-                <path d="M120 280H280V320H120V280Z" fill="#2C3E50" opacity="0.3"/>
-                <path d="M140 340H260V360H140V340Z" fill="#2C3E50" opacity="0.3"/>
-                <path d="M160 370H240V390H160V370Z" fill="#2C3E50" opacity="0.3"/>
-              </svg>
+              <div class="premium-hero__placeholder-content">
+                <div class="premium-hero__placeholder-icon">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 15C21.716 15 15 21.716 15 30C15 38.284 21.716 45 30 45C38.284 45 45 38.284 45 30C45 21.716 38.284 15 30 15ZM30 42C23.373 42 18 36.627 18 30C18 23.373 23.373 18 30 18C36.627 18 42 23.373 42 30C42 36.627 36.627 42 30 42Z" fill="currentColor" opacity="0.3"/>
+                    <path d="M30 22C25.589 22 22 25.589 22 30C22 34.411 25.589 38 30 38C34.411 38 38 34.411 38 30C38 25.589 34.411 22 30 22Z" fill="currentColor" opacity="0.5"/>
+                  </svg>
+                </div>
+                <p class="premium-hero__placeholder-text">Upload hero image</p>
+              </div>
             </div>
           </div>
         {% endif %}
@@ -138,6 +140,34 @@
     height: auto;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  
+  .premium-hero__placeholder {
+    width: 100%;
+    height: 400px;
+    background: rgba(255,255,255,0.05);
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .premium-hero__placeholder-content {
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+  }
+  
+  .premium-hero__placeholder-icon {
+    margin-bottom: 16px;
+  }
+  
+  .premium-hero__placeholder-text {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
   }
   
   @media screen and (max-width: 989px) {
