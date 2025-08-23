@@ -51,7 +51,7 @@
       ]
     },
     "why_us": {
-      "type": "why_us",
+      "type": "why-us",
       "settings": {
         "heading": "Why Choose Harbour & Field",
         "subheading": "We're committed to delivering exceptional quality and service in every aspect of your experience."
