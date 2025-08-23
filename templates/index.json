@@ -12,7 +12,7 @@
     "category_callouts": {
       "type": "multicolumn",
       "settings": {
-        "title": "",
+        "title": "Shop by Style",
         "heading_size": "h2",
         "image_width": "full",
         "swipe_on_mobile": false,
@@ -75,7 +75,7 @@
         "color_scheme": "scheme-1",
         "show_view_all": true,
         "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -83,6 +83,68 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "trust_signals": {
+      "type": "multicolumn",
+      "settings": {
+        "title": "",
+        "heading_size": "h3",
+        "image_width": "full",
+        "swipe_on_mobile": false,
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "padding_top": 80,
+        "padding_bottom": 80
+      },
+      "blocks": {
+        "shipping": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping",
+            "text": "<p>Free shipping on orders over $200</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "returns": {
+          "type": "column",
+          "settings": {
+            "title": "30-Day Returns",
+            "text": "<p>Not satisfied? Return within 30 days</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "alterations": {
+          "type": "column",
+          "settings": {
+            "title": "Free Alterations",
+            "text": "<p>Free alterations for perfect fit</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "quality": {
+          "type": "column",
+          "settings": {
+            "title": "Premium Quality",
+            "text": "<p>Italian fabrics, NZ Merino wool</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "shipping",
+        "returns",
+        "alterations",
+        "quality"
+      ]
     },
     "brand_story": {
       "type": "rich-text",
@@ -113,31 +175,6 @@
         "padding_bottom": 80
       }
     },
-    "editorial_strip": {
-      "type": "image-with-text",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "padding_top": 80,
-        "padding_bottom": 80
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Understated. Considered. Enduring.",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ]
-    },
     "newsletter": {
       "type": "newsletter",
       "settings": {
@@ -154,8 +191,8 @@
     "premium_hero",
     "category_callouts",
     "featured_collection",
+    "trust_signals",
     "brand_story",
-    "editorial_strip",
     "newsletter"
   ]
 }

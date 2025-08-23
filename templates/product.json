@@ -36,45 +36,45 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
           }
         },
         "description": {
           "type": "description"
         },
-        "collapsible-row-0": {
+        "materials": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
+            "heading": "Materials & Construction",
             "icon": "leather",
-            "content": "",
+            "content": "Premium fabrics sourced from Italian mills and New Zealand Merino wool. Expert tailoring ensures perfect fit and durability.",
             "page": ""
           }
         },
-        "collapsible-row-1": {
+        "sizing": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
+            "heading": "Sizing Guide",
             "icon": "ruler",
-            "content": "",
+            "content": "Our pieces are designed for the modern professional. Refer to our detailed sizing chart for the perfect fit.",
             "page": ""
           }
         },
-        "collapsible-row-3": {
+        "care": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
-            "content": "",
+            "content": "Professional dry cleaning recommended. Store on wooden hangers to maintain shape. Avoid direct sunlight.",
+            "page": ""
+          }
+        },
+        "shipping": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "Free shipping on orders over $200. 30-day returns. Free alterations available.",
             "page": ""
           }
         },
@@ -94,10 +94,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
+        "materials",
+        "sizing",
+        "care",
+        "shipping",
         "share"
       ],
       "settings": {
@@ -106,94 +106,79 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "mobile_thumbnails": "hide",
-        "hide_variants": true,
+        "hide_variants": false,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
+    "product-benefits": {
       "type": "multicolumn",
       "blocks": {
-        "column-0": {
+        "shipping": {
           "type": "column",
           "settings": {
             "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Free shipping on orders over $200. Express shipping available.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column-1": {
+        "returns": {
           "type": "column",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "30-Day Returns",
+            "text": "<p>Not satisfied? Return within 30 days for a full refund.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "alterations": {
+          "type": "column",
+          "settings": {
+            "title": "Free Alterations",
+            "text": "<p>Free alterations to ensure your perfect fit.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "quality": {
+          "type": "column",
+          "settings": {
+            "title": "Premium Quality",
+            "text": "<p>Italian fabrics, NZ Merino wool, expert craftsmanship.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column-0",
-        "column-1"
+        "shipping",
+        "returns",
+        "alterations",
+        "quality"
       ],
       "settings": {
         "title": "",
-        "heading_size": "h1",
+        "heading_size": "h3",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
+        "columns_desktop": 4,
+        "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
         "swipe_on_mobile": false,
         "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "columns_mobile": "2",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Complete Your Look",
         "heading_size": "h2",
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
@@ -202,15 +187,14 @@
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
   "order": [
     "main",
-    "image-with-text",
-    "multicolumn",
+    "product-benefits",
     "related-products"
   ]
 }
