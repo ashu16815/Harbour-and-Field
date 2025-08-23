@@ -35,7 +35,7 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 8,
         "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
@@ -164,52 +164,13 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Understated, considered, enduring.",
+            "heading": "Understated. Considered. Enduring.",
             "heading_size": "h2"
           }
         }
       },
       "block_order": [
         "heading"
-      ]
-    },
-    "about_us": {
-      "type": "image-with-text",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1"
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Story",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Founded with a vision to redefine men's workwear, Harbour & Field delivers timeless designs for the modern professional. Inspired by global boardrooms and everyday ambition, our collections are crafted to help you look sharp and feel confident in every setting.</p>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Explore Our Story",
-            "button_link": "/pages/about",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
       ]
     },
     "newsletter": {
@@ -228,7 +189,6 @@
     "featured_collection",
     "brand_story",
     "editorial_strip",
-    "about_us",
     "newsletter"
   ]
 }

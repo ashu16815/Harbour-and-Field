@@ -1,0 +1,199 @@
+{% comment %}
+  Premium Footer Section
+  Features: Shop, Company, Help columns with social links
+{% endcomment %}
+
+<footer class="footer--premium" data-section-id="{{ section.id }}" data-section-type="premium-footer">
+  <div class="footer__container">
+    <div class="footer__content">
+      <!-- Shop Column -->
+      <div class="footer__column">
+        <h3 class="footer__column-title">Shop</h3>
+        <ul class="footer__links">
+          <li class="footer__link-item">
+            <a href="/collections/all" class="footer__link">All Products</a>
+          </li>
+          <li class="footer__link-item">
+            <a href="/collections/new" class="footer__link">New Arrivals</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Company Column -->
+      <div class="footer__column">
+        <h3 class="footer__column-title">Company</h3>
+        <ul class="footer__links">
+          <li class="footer__link-item">
+            <a href="/pages/about" class="footer__link">About Us</a>
+          </li>
+          <li class="footer__link-item">
+            <a href="/pages/contact" class="footer__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Help Column -->
+      <div class="footer__column">
+        <h3 class="footer__column-title">Help</h3>
+        <ul class="footer__links">
+          <li class="footer__link-item">
+            <a href="/policies/shipping-policy" class="footer__link">Shipping</a>
+          </li>
+          <li class="footer__link-item">
+            <a href="/policies/refund-policy" class="footer__link">Returns</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social Links -->
+    <div class="footer__social">
+      <h3 class="footer__social-title">Follow Us</h3>
+      <div class="footer__social-links">
+        <a href="https://instagram.com/harbourandfield" class="footer__social-link" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer__bottom">
+    <div class="footer__container">
+      <p class="footer__copyright">
+        © {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+{% stylesheet %}
+.footer--premium {
+  background: var(--color-background) !important;
+  border-top: 1px solid var(--color-lines) !important;
+  padding: var(--spacing-xxl) 0 var(--spacing-lg) 0 !important;
+}
+
+.footer__container {
+  max-width: var(--container-max) !important;
+  margin: 0 auto !important;
+  padding: 0 var(--gutter) !important;
+}
+
+.footer__content {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: var(--spacing-xl) !important;
+  margin-bottom: var(--spacing-xl) !important;
+}
+
+.footer__column-title {
+  font-family: var(--font-heading-family) !important;
+  font-size: var(--font-size-h3) !important;
+  font-weight: 400 !important;
+  color: var(--color-text-primary) !important;
+  margin-bottom: var(--spacing-md) !important;
+}
+
+.footer__links {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.footer__link-item {
+  margin-bottom: var(--spacing-sm) !important;
+}
+
+.footer__link {
+  font-family: var(--font-body-family) !important;
+  font-size: var(--font-size-body) !important;
+  color: var(--color-text-secondary) !important;
+  text-decoration: none !important;
+  transition: color var(--transition-normal) !important;
+}
+
+.footer__link:hover {
+  color: var(--color-text-primary) !important;
+}
+
+.footer__social {
+  text-align: center !important;
+  margin-bottom: var(--spacing-xl) !important;
+}
+
+.footer__social-title {
+  font-family: var(--font-heading-family) !important;
+  font-size: var(--font-size-h3) !important;
+  font-weight: 400 !important;
+  color: var(--color-text-primary) !important;
+  margin-bottom: var(--spacing-md) !important;
+}
+
+.footer__social-links {
+  display: flex !important;
+  justify-content: center !important;
+  gap: var(--spacing-md) !important;
+}
+
+.footer__social-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--color-text-secondary) !important;
+  text-decoration: none !important;
+  padding: var(--spacing-sm) !important;
+  transition: color var(--transition-normal) !important;
+}
+
+.footer__social-link:hover {
+  color: var(--color-text-primary) !important;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--color-lines) !important;
+  padding-top: var(--spacing-lg) !important;
+}
+
+.footer__copyright {
+  font-family: var(--font-body-family) !important;
+  font-size: var(--font-size-small) !important;
+  color: var(--color-text-secondary) !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 749px) {
+  .footer__content {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg) !important;
+  }
+  
+  .footer__column {
+    text-align: center !important;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Premium Footer",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "instagram_link",
+      "label": "Instagram URL",
+      "default": "https://instagram.com/harbourandfield"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Premium Footer"
+    }
+  ]
+}
+{% endschema %}
