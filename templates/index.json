@@ -80,38 +80,33 @@
       },
       "blocks": {
         "collection_1": {
-          "type": "collection",
+          "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "Shirts"
+            "collection": ""
           }
         },
         "collection_2": {
-          "type": "collection",
+          "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "Jackets"
+            "collection": ""
           }
         },
         "collection_3": {
-          "type": "collection",
+          "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "Trousers"
+            "collection": ""
           }
         },
         "collection_4": {
-          "type": "collection",
+          "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "Outerwear"
+            "collection": ""
           }
         },
         "collection_5": {
-          "type": "collection",
+          "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "Accessories"
+            "collection": ""
           }
         }
       },
